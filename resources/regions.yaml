@@ -1,0 +1,8 @@
+grassland:
+  standard_events: grassland
+  home_site: grassland_town
+  forced_events:
+    - grassland_boss
+    - grassland_secret
+  description: >
+    Grasslands are large open fields of grasses frequented by grazing animals; the soil is excellent for growing crops, which makes them the perfect home for humans, who generally base their settlements around agriculture.

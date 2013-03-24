@@ -1,0 +1,137 @@
+welcome:
+  title: Welcome to Adventure Foo!
+  text: >
+    Welcome to Adventure Foo, the game of adventure! You'll have
+    ample opportunity to experience the thrills of adventure in this
+    adventurous thriller of a tale! Blah blah blah blah blah blah.
+    
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi dictum 
+    lectus eu ante interdum id consectetur diam mollis. Curabitur non 
+    lectus scelerisque tortor laoreet scelerisque et et nisl. Pellentesque
+    est augue, congue quis pellentesque vitae, bibendum id mauris. Fusce 
+    cursus dui non nisi feugiat sodales. Sed elementum lectus in odio 
+    gravida at faucibus nunc rutrum.
+    
+nothing:
+  - 
+    title: Uneventful Night
+    text: >
+      As the sky darkens you find a safe place to make camp. Nothing disturbs you 
+      as you sleep, and in the morning you break camp and prepare to move on.
+  -
+    title: Lonely Cottage # Maybe make this an 'investigate or don't' with variable results?
+    text: > 
+      You spot a lonely cottage with a garden, but as you approach you discover
+      it is run down and abandoned. There's nothing worth your attention inside, 
+      so you move on.
+  -
+    title: Storytelling
+    text: >
+      An old farmer who lives in the area lets you rest for the night in his barn.
+      The only payment he asks for is stories from your travels. After breakfast
+      the next morning, you continue on your way.
+  -
+    title: Crossing Paths
+    text: You pass by a few other travelers who point you towards a good place to make camp for the evening.
+  -
+    title: Ancient Shrine
+    text: >
+      You find a ancient, weathered shrine; you try to decipher which God it was 
+      built to honor, but the markings are too worn to read.
+
+grassland:
+  - nothing
+  - test_encounter_1
+  - test_encounter_2
+  - test_encounter_3
+  - test_encounter_4
+
+test_encounter_1:
+  title: Test Encounter 1
+  text: This is a test of the encounter data format.
+  choices:
+    -
+      label: I'll take the red snapper!
+      result:
+        title: You get a red snapper.
+        text: You choose the red snapper. Very tasty!
+        action: 
+          name: reward_item
+          options:
+            item_key: red_snapper
+        done: Take your red snapper and leave.
+    -
+      label: Give me what's in the box!
+      result:
+        title: Show her... what's in the box!
+        text: |
+          Nothing! Nothing's in the box.
+          ...
+          Stupid! You're so stupid!!
+        done: Leave in shame and disgrace.
+
+test_encounter_2:
+  title: Test Encounter 2
+  text: This encounter is pretty boring.
+
+test_encounter_3:
+  title: Test Encounter 3
+  text: You got a cool item!
+  action:
+    name: reward_item
+    options:
+      item_key: [sword, shield, armor, potion]
+  done: Hooray!
+
+test_encounter_4:
+  title: It's time for a fight!
+  text: A monster jumps out at you!
+  combat:
+    field: # Figure this out later
+    enemies:
+      specific:
+        -
+          key: gob_the_boblin_king
+      generic:
+        -
+          class: boblin
+          quantity: 3
+        - 
+          class: strong_boblin
+          quantity: 1
+
+grassland_town:
+  -
+    title: A small farming village
+    text: >
+      This is a small farming village. Eventually, there will be real
+      content here, like a shop, and a place to heal.
+  -
+    title: A bustling town
+    text: >
+      This is a bustling city. Eventually, there will be real content
+      here, like a shop, a place to heal, and a place to recruit new party
+      members.
+  -
+    title: A major city
+    text: >
+      This large city is a major population center for Humans, as houses its fair
+      share of other races as well. High quality shop, recuiting, temple, quests, etc.
+      
+grassland_boss:
+  -
+    title: Scary Dragon!
+    text: >
+     Trogdor was a man! He was a dragon... man. Or maybe he was just a dragon! But he
+     was still TROGDOR! TROGDOR!
+  -
+    title: Some other boss monster
+    text: A more different boss monster.
+    
+grassland_secret:
+  -
+    title: You found the thing!
+    text: It's a secret to everyone.
+  -
+    title: Dodongo hates smoke
+    text: Master using it and have this.

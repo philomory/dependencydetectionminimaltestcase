@@ -1,0 +1,337 @@
+human_squire:
+  race: human
+  title: Squire
+  desc: >
+    This loyal servant follows %{his} Knightly master on quests across
+    the land, handling chores and learning the ways of the battlefield.
+    It's thankless work, and doesn't pay well, but %{he}'s not
+    complaining. Anything to get away from working the farm.
+  health: 6
+  strength: 2
+  slots:
+    -
+      type: melee_weapon
+      initial: short_sword
+  fixed:
+    - basic_armor
+    - basic_shield
+  passive:
+    - mending # repairs damaged equipment
+
+hunting_hound:
+  race: animal
+  title: Hunting Hound
+  desc: >
+    This trusty companion # TODO: fill in!
+  health: 7
+  strength: 2
+  defense: 1
+  # movement: faster (need to figure scale)
+  fixed:
+    - hound_teeth
+  passive:
+    - first_move # when not surprised, get a move-only turn ahead of normal turn order
+
+small_fire_elemental:
+  race: elemental
+  title: Lesser Fire Elemental
+  desc: TODO
+  health: 2 # But see respawnable
+  strength: 3
+  fixed:
+    - lesser_flame_strike
+  passive:
+    - flame_shield
+    - respawnable
+
+small_water_elemental:
+  race: elemental
+  title: Lesser Water Elemental
+  desc: TODO
+  health: 3
+  strength: 2
+  fixed:
+    - lesser_flood
+  passive:
+    - respawnable
+
+small_earth_elemental:
+  race: elemental
+  title: Lesser Earth Elemental
+  desc: TODO
+  health: 4
+  strength: 2
+  defense: 3
+  fixed:
+    - lesser_stone_strike
+    - lesser_stone_shield
+  passive:
+    - respawnable
+
+small_air_elemental:
+  race: elemental
+  title: Lesser Air Elemental
+  desc: TODO
+  health: 2
+  strength: 1
+  # movement: very far
+  # speed: very fast
+  fixed:
+    - lesser_gust
+  passive:
+    - flight
+    - respawnable
+
+small_energy_elemental:
+  race: elemental
+  title: Lesser Energy Elemental
+  desc: TODO
+  health: 1
+  strength: 0
+  fixed:
+    - basic_spell
+    - basic_spell
+  passive:
+    - respawnable
+
+small_holy_elemental:
+  race: elemental
+  title: Lesser Holy Elemental
+  desc: TODO
+  health: 2
+  strength: 1
+  fixed:
+    - lesser_heal
+    - lesser_holy_bolt # anti-undead
+  passive:
+    - respawnable
+
+small_elemental:
+  - small_fire_elemental
+  - small_water_elemental
+  - small_earth_elemental
+  - small_air_elemental
+  - small_energy_elemental
+  - small_holy_elemental
+
+human_archer:
+  race: human
+  title: Archer
+  desc: TODO
+  health: 5
+  strength: 2
+  slots:
+    -
+      type: ranged_weapon
+      initial: wimpy_bow
+  fixed:
+    - wimpy_leather
+
+human_minstrel:
+  race: human
+  title: Minstrel
+  desc: TODO
+  health: 5
+  strength: 1
+  slot:
+    -
+      type: song
+      initial: basic_song
+    -
+      type: song
+      initial: basic_song
+  fixed:
+    - basic_instrument
+
+human_militiaman:
+  race: human
+  title: Militiaman
+  desc: TODO
+  health: 6
+  strength: 2
+  slots:
+    - 
+      type: pole_weapon
+      initial: basic_pole_weapon
+  fixed:
+    - basic_body_armor
+
+human_soldier:
+  race: human
+  title: Soldier
+  desc: TODO
+  health: 6
+  strength: 2
+  slots:
+    -
+      type: melee_weapon
+      initial: basic_melee_weapon
+  fixed:
+    - basic_shield
+    - basic_body_armor
+
+human_healer:
+  race: human
+  title: Healer
+  desc: TODO
+  health: 5
+  strength: 1
+  slots:
+    -
+      type: healing_spell
+  fixed:
+    - lesser_heal
+    - basic_body_armor
+  
+human_apprentice:
+  race: human
+  title: Apprentice
+  desc: TODO
+  health: 3
+  strength: 0
+  slots:
+    - 
+      type: magic_spell
+  fixed:
+    - basic_spell
+    - wimpy_robes
+    - wimpy_staff
+
+
+human_ally:
+  - human_archer
+  - human_minstrel
+  - human_militiaman
+  - human_solider
+  - human_healer
+
+
+# need to figure out meaningful system for who is allowed to equip what.
+
+human_adventurer:
+  race: human
+  title: Adventurer
+  description: A well-rounded jack of all trades. Master of none, though.
+  health: 7
+  strength: 2
+  slots:
+    - 
+      type: melee_weapon
+      initial: wimpy_dagger
+    - 
+      type: ranged_weapon
+      initial: wimpy_bow
+    - 
+      type: magic_spell
+      initial: wimpy_flash
+    - 
+      type: shield
+    - 
+      type: body_armor
+      initial: wimpy_leather
+    - 
+      type: accessory
+    -
+      type: accessory
+
+
+human_knight:
+  race: human
+  title: Knight
+  description: A valiant Knight, master of both offense and defense in close-range combat.
+  health: 10
+  strength: 2 # Boosted by Strength of Arms
+  slots:
+    -
+      type: melee_weapon
+      initial: decent_sword
+      max: epic
+    -
+      type: shield
+      initial: decent_shield
+      max: epic
+    -
+      type: body_armor
+      initial: decent_armor
+      max: epic
+    -
+      type: ranged_weapon # TODO: limited skill
+    -
+      type: magic_spell # TODO: limited skill
+    -
+      type: accessory
+  passive:
+    - strength_of_arms # Increased melee damage
+    - feudalism # Some sort of non-combat bonus in most human settlements
+
+human_hunter:
+  race: human
+  title: Hunter
+  description: A cunning Hunter, who brings down his prey with unerring aim
+  health: 6
+  strength: 2
+  slots:
+    -
+      type: ranged_weapon
+      initial: decent_bow
+      max: epic
+    -
+      type: ranged_weapon
+      max: epic
+    -
+      type: melee_weapon # TODO: limited skill
+    -
+      type: body_armor
+      initial: wimpy_leather # TODO: if even leather, consider lowering
+    -
+      type: magic_spell # TODO: consider limiting skill
+    -
+      type: accessory
+    -
+      type: accessory
+  passive:
+    - dead_shot # Longer range, increased accuracy
+    - monster_hunter # Who knows?
+
+human_wizard:
+  race: human
+  title: Wizard
+  description: A mysterious Wizard, master of the arcane
+  health: 5
+  strength: 1
+  slots:
+    -
+      type: melee_weapon # TODO: limit skill and/or category, perhaps staves only?
+      initial: wizard_staff
+    -
+      type: body_armor
+      initial: wizard_robe
+    -
+      type: magic_spell
+      initial: wizard_initial_spell # list of spells picked from at random
+      max: epic
+    -
+      type: magic_spell
+      initial: wizard_initial_spell
+      max: epic
+    -
+      type: magic_spell
+      max: epic
+    -
+      type: magic_spell
+      max: epic
+    -
+      type: magic_spell
+      max: epic
+    -
+      type: magic_spell
+      max: epic
+    -
+      type: accessory
+    -
+      type: accessory
+  passive:
+    - quick_caster # Spells are available faster, whether due to MP charge or cooldown or however it ends up working
+    - wisdom # Some sort of non-combat bonus in certain encounters
+
+

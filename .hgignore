@@ -1,0 +1,17 @@
+syntax: glob
+.repl_history
+build
+tags
+resources/*.nib
+resources/*.momd
+resources/*.storyboardc
+.dat*.001
+.DS_Store
+nbproject
+.redcar
+#*#
+*~
+*.sw[po]
+.eprj
+.sass-cache
+.idea

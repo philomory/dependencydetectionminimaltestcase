@@ -1,0 +1,93 @@
+red_snapper:
+  name: Red Snapper
+  type: food
+  level: normal # could be left out, normal is the default
+  desc: A succulent Red Snapper! Very Tasty!
+  
+potion:
+  name: Potion
+  type: consumable
+  desc: A potion
+  
+sword:
+  name: Sword
+  type: melee_weapon
+  desc: A sword
+  
+shield:
+  name: Shield
+  type: shield
+  desc: A shield
+  
+armor:
+  name: Armor
+  type: armor
+  desc: Some body armor
+  
+wimpy_dagger:
+  name: Wimpy Dagger
+  type: melee_weapon
+
+wimpy_leather:
+  name: Wimpy Leather
+  type: body_armor
+  desc: I'd gladly pay you tomorrow for some body armor today!
+  
+wimpy_bow:
+  name: Wimpy Bow
+  type: ranged_weapon
+
+basic_instrument:
+  - basic_lute
+  - basic_drum
+  - basic_fife
+  - basic_lyre
+  
+basic_lute:
+  name: Basic Lute
+  type: instrument
+
+basic_drum:
+  name: Basic Drum
+  type: instrument
+
+basic_fife:
+  name: Basic Fife
+  type: instrument
+
+basic_lyre:
+  name: Basic Lyre
+  type: instrument
+  
+basic_pole_weapon:
+  - basic_spear
+  - basic_halbred
+  
+basic_spear:
+  name: Basic Spear
+  type: pole_weapon
+
+basic_halbred:
+  name: basic_halbred
+  type: pole_weapon
+  
+basic_body_armor:
+  - basic_leather
+  - basic_chain
+  - basic_plate
+  
+basic_leather:
+  name: Basic Leather
+  type: body_armor
+  
+basic_chain:
+  name: Basic Chain
+  type: body_armor
+  
+basic_plate:
+  name: Basic Plate
+  type: body_armor
+  
+wimpy_flash:
+  name: Wimpy Flash
+  type: spell

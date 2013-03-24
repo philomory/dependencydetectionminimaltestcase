@@ -1,0 +1,130 @@
+# need to figure out meaningful system for who is allowed to equip what.
+
+human_adventurer:
+  race: human
+  class_name: Adventurer
+  description: A well-rounded jack of all trades. Master of none, though.
+  health: 7
+  strength: 2
+  slots:
+    - 
+      type: melee_weapon
+      initial: wimpy_dagger
+    - 
+      type: ranged_weapon
+      initial: wimpy_bow
+    - 
+      type: magic_spell
+      initial: wimpy_flash
+    - 
+      type: shield
+    - 
+      type: body_armor
+      initial: wimpy_leather
+    - 
+      type: accessory
+    -
+      type: accessory
+
+  
+human_knight:
+  race: human
+  class_name: Knight
+  description: A valiant Knight, master of both offense and defense in close-range combat.
+  health: 10
+  strength: 2 # Boosted by Strength of Arms
+  slots:
+    -
+      type: melee_weapon
+      initial: decent_sword
+      max: epic
+    -
+      type: shield
+      initial: decent_shield
+      max: epic
+    -
+      type: body_armor
+      initial: decent_armor
+      max: epic
+    -
+      type: ranged_weapon # TODO: limited skill
+    -
+      type: magic_spell # TODO: limited skill
+    -
+      type: accessory
+  passive:
+    - strength_of_arms # Increased melee damage
+    - feudalism # Some sort of non-combat bonus in most human settlements
+
+human_hunter:
+  race: human
+  class_name: Hunter
+  description: A cunning Hunter, who brings down his prey with unerring aim
+  health: 6
+  strength: 2
+  slots:
+    -
+      type: ranged_weapon
+      initial: decent_bow
+      max: epic
+    -
+      type: ranged_weapon
+      max: epic
+    -
+      type: melee_weapon # TODO: limited skill
+    -
+      type: body_armor
+      initial: wimpy_leather # TODO: if even leather, consider lowering
+    -
+      type: magic_spell # TODO: consider limiting skill
+    -
+      type: accessory
+    -
+      type: accessory
+  passive:
+    - dead_shot # Longer range, increased accuracy
+    - monster_hunter # Who knows?
+      
+human_wizard:
+  race: human
+  class_name: Wizard
+  description: A mysterious Wizard, master of the arcane
+  health: 5
+  strength: 1
+  slots:
+    -
+      type: melee_weapon # TODO: limit skill and/or category, perhaps staves only?
+      initial: wizard_staff
+    -
+      type: body_armor
+      initial: wizard_robe
+    -
+      type: magic_spell
+      initial: wizard_initial_spell # list of spells picked from at random
+      max: epic
+    -
+      type: magic_spell
+      initial: wizard_initial_spell
+      max: epic
+    -
+      type: magic_spell
+      max: epic
+    -
+      type: magic_spell
+      max: epic
+    -
+      type: magic_spell
+      max: epic
+    -
+      type: magic_spell
+      max: epic
+    -
+      type: accessory
+    -
+      type: accessory
+  passive:
+    - quick_caster # Spells are available faster, whether due to MP charge or cooldown or however it ends up working
+    - wisdom # Some sort of non-combat bonus in certain encounters
+    
+    
+      

@@ -1,0 +1,59 @@
+all_races:
+  - human
+  
+human:
+  name: Human
+  plural: Humans
+  desc: Humans are boring. Boo!
+  classes:
+    - adventurer
+    - knight
+    - hunter
+    - wizard
+
+adventurer:
+  name: Adventurer
+  desc: >
+    A bold adventurer, you make you way through the world righting wrongs 
+    and exploring the unknown. Mostly, though, you're in it for the treasure.
+  hero: human_adventurer
+  others:
+    - human_ally
+    - human_ally
+  
+knight:
+  lock: human_knight_unlock
+  name: Knight
+  desc: >
+    A brave and valiant warrior, you travel the land with your trusty
+    squire to aid the weak and defeat the wicked. Perks include romantic
+    rewards from rescued royalty, and treasure.
+  hero: human_knight
+  others:
+    - human_squire
+    
+hunter:
+  lock: human_hunter_unlock
+  name: Hunter
+  desc: >
+    A crafty and relentless hunter, you can track down your quarry across
+    any wilderness. Bringing down your prey with a well-aimed shot brings
+    a great deal of satisfaction. And treasure.
+  hero: human_hunter
+  others:
+    - hunting_hound
+    - hunting_hound
+  
+wizard:
+  lock: human_wizard_unlock
+  name: Wizard
+  desc: >
+    A wise and mighty wizard, you bend reality to your will and make lesser
+    men cower before you. Travelling the land, you seek out ancient temples,
+    unearthing long-forgotten lore and powerful magic. You often find treasure,
+    as well.
+  hero: human_wizard
+  others:
+    - small_elemental
+    - small_elemental
+  

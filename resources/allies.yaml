@@ -1,0 +1,206 @@
+human_squire:
+  race: human
+  class_name: Squire
+  desc: >
+    This loyal servant follows %{his} Knightly master on quests across
+    the land, handling chores and learning the ways of the battlefield.
+    It's thankless work, and doesn't pay well, but %{he}'s not
+    complaining. Anything to get away from working the farm.
+  health: 6
+  strength: 2
+  slots:
+    -
+      type: melee_weapon
+      initial: short_sword
+  fixed:
+    - basic_armor
+    - basic_shield
+  passive:
+    - mending # repairs damaged equipment
+
+hunting_hound:
+  race: animal
+  class_name: Hunting Hound
+  desc: >
+    This trusty companion # TODO: fill in!
+  health: 7
+  strength: 2
+  defense: 1
+  # movement: faster (need to figure scale)
+  fixed:
+    - hound_teeth
+  passive:
+    - first_move # when not surprised, get a move-only turn ahead of normal turn order
+
+small_fire_elemental:
+  race: elemental
+  class_name: Lesser Fire Elemental
+  desc: TODO
+  health: 2 # But see respawnable
+  strength: 3
+  fixed:
+    - lesser_flame_strike
+  passive:
+    - flame_shield
+    - respawnable
+
+small_water_elemental:
+  race: elemental
+  class_name: Lesser Water Elemental
+  desc: TODO
+  health: 3
+  strength: 2
+  fixed:
+    - lesser_flood
+  passive:
+    - respawnable
+
+small_earth_elemental:
+  race: elemental
+  class_name: Lesser Earth Elemental
+  desc: TODO
+  health: 4
+  strength: 2
+  defense: 3
+  fixed:
+    - lesser_stone_strike
+    - lesser_stone_shield
+  passive:
+    - respawnable
+
+small_air_elemental:
+  race: elemental
+  class_name: Lesser Air Elemental
+  desc: TODO
+  health: 2
+  strength: 1
+  # movement: very far
+  # speed: very fast
+  fixed:
+    - lesser_gust
+  passive:
+    - flight
+    - respawnable
+
+small_energy_elemental:
+  race: elemental
+  class_name: Lesser Energy Elemental
+  desc: TODO
+  health: 1
+  strength: 0
+  fixed:
+    - basic_spell
+    - basic_spell
+  passive:
+    - respawnable
+
+small_holy_elemental:
+  race: elemental
+  class_name: Lesser Holy Elemental
+  desc: TODO
+  health: 2
+  strength: 1
+  fixed:
+    - lesser_heal
+    - lesser_holy_bolt # anti-undead
+  passive:
+    - respawnable
+
+small_elemental:
+  - small_fire_elemental
+  - small_water_elemental
+  - small_earth_elemental
+  - small_air_elemental
+  - small_energy_elemental
+  - small_holy_elemental
+
+human_archer:
+  race: human
+  class_name: Archer
+  desc: TODO
+  health: 5
+  strength: 2
+  slots:
+    -
+      type: ranged_weapon
+      initial: wimpy_bow
+  fixed:
+    - wimpy_leather
+
+human_minstrel:
+  race: human
+  class_name: Minstrel
+  desc: TODO
+  health: 5
+  strength: 1
+  slot:
+    -
+      type: song
+      initial: basic_song
+    -
+      type: song
+      initial: basic_song
+  fixed:
+    - basic_instrument
+
+human_militiaman:
+  race: human
+  class_name: Militiaman
+  desc: TODO
+  health: 6
+  strength: 2
+  slots:
+    - 
+      type: pole_weapon
+      initial: basic_pole_weapon
+  fixed:
+    - basic_body_armor
+
+human_soldier:
+  race: human
+  class_name: Soldier
+  desc: TODO
+  health: 6
+  strength: 2
+  slots:
+    -
+      type: melee_weapon
+      initial: basic_melee_weapon
+  fixed:
+    - basic_shield
+    - basic_body_armor
+
+human_healer:
+  race: human
+  class_name: Healer
+  desc: TODO
+  health: 5
+  strength: 1
+  slots:
+    -
+      type: healing_spell
+  fixed:
+    - lesser_heal
+    - basic_body_armor
+  
+human_apprentice:
+  race: human
+  class_name: Apprentice
+  desc: TODO
+  health: 3
+  strength: 0
+  slots:
+    - 
+      type: magic_spell
+  fixed:
+    - basic_spell
+    - wimpy_robes
+    - wimpy_staff
+
+
+human_ally:
+  - human_archer
+  - human_minstrel
+  - human_militiaman
+  - human_solider
+  - human_healer
