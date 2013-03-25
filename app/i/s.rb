@@ -1,10 +1,8 @@
-class G
   class I
-    class E < I
+    class S < E
       def initialize(*args)
         super
-        puts "E"
+        puts "S"
       end
     end
   end
-end
